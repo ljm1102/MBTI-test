@@ -35,7 +35,87 @@ T(사고적) 질문, F(감정적) 질문 :
 -달이 떠서 전화한 친구(t: 내 생각을 했니, 감동이야 평생가자 / f: 왜 내 생각을 해, 잠을 자)
 -머리를 짧게 자른 친구에게 (t: 얼마나 잘랐어? 어디서 잘랐어? / f: 무슨일 있었어?) 
 -나 너무 슬퍼서 하루종일 집에만 있었어 라는 친구에게(t: 집에서 뭐했는데? /f: 무슨일인데? 왜 슬퍼?)
--
+-print("mbti 검사를 시작하겠습니다")
+t=0 
+f=0
+arr=[0]*4
+def p1():
+    global t
+    global f 
+    a= input("교통사고가 났을 때 (t: 보험 불렀어? 병원은? / f: 무슨 일이야? 괜찮아? 크게 다쳤어?) :" )
+    if (a=="t"):
+        t+=1
+        return t
+    elif (a=="f"):
+        f+=1
+        return f
+    else:
+        print("다시 선택해주세요")
+        print(p1())
+def p2(): 
+    global t 
+    global f 
+    a= input("타인이 나를 싫어 할 때 (t:왜 나를 싫어하지? /f: 내가 뭘 잘못했지? ,말 실수를 했나?) :")
+    if (a=="t"):
+        t+=1
+        return t
+    elif (a=="f"):
+        f+=1
+        return f
+    else:
+        print("다시 선택해주세요")
+        print(p2())
+def p3(): 
+    global t 
+    global f 
+    a= input("최종 면접에서 떨어졌을 때 (t: 답변을 어떻게 했었는지 말해줄래? / f: 속상해도 괜찮아, 다음에 잘하면 되지): ")
+    if (a=="t"):
+        t+=1
+        return t
+    elif (a=="f"):
+        f+=1
+        return f
+    else:
+        print("다시 선택해주세요")
+        print(p3())
+def p4(): 
+    global t 
+    global f 
+    a= input("우울해서 쇼핑하느라 과소비했어(t: 얼마나 썼는데?/ f: 왜 우울해? 무슨일 있어?): ")
+    if (a=="t"):
+        t+=1
+        return t
+    elif (a=="f"):
+        f+=1
+        return f
+    else:
+        print("다시 선택해주세요")
+        print(p4())
+def p5(): 
+    global t 
+    global f 
+    a= input("머리를 짧게 자른 친구에게 (t: 무슨일 있었어? / 얼마나 잘랐어? 어디서 잘랐어?): ")
+    if (a=="t"):
+        t+=1
+        return t
+    elif (a=="f"):
+        f+=1
+        return f
+    else:
+        print("다시 선택해주세요")
+        print(p5())
+p1()
+p2()
+p3()
+p4()
+p5()
+if (t>f):
+    arr[2]="T"
+else:
+    arr[2]="F"
+print(f"디버깅 값 확인과정: {t},{f}")
+for i in range(4):
+    print(arr[i],end="t")
 -
 -
 -
