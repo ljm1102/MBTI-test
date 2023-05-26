@@ -32,6 +32,3 @@ function getCurrentPageId() {
     
     return null;
 }
-
-
-애초에 .JS 파일만 따로 작동하도록 수정했습니 HTML 에 JAVAVSRIPT 파일만가져가면 되도록 이젠 될듯? 근데 아마도 VSS에서만 될거 같아요
