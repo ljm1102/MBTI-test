@@ -12,11 +12,19 @@ button:hover
 button:focus
 {
 	box-shadow: 0 0 0 3px black;
+	background-color: #C8FFFF;
+	
 }
 button:active
 {
-background-color: gray;
+	background-color: gray;
 }
+
+button:visited
+{
+	 background-color: aqua;
+}
+
 body
 {
 	text-align: center;
