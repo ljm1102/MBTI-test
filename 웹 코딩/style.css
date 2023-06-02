@@ -1,0 +1,65 @@
+div
+{
+width: 1000px;
+height: 1000px;
+background-color: #E8F5FF;
+margin: 0 auto;
+border-radius: 20px;
+}
+
+button
+{
+	text-align: center;
+	background-color: white;
+	border-radius: 10px;
+	padding: 15px;
+}
+button:hover
+{
+	background-color: gray;
+}
+button:focus
+{
+	box-shadow: 0 0 0 3px black;
+	background-color: #C8FFFF;
+	
+}
+button:active
+{
+	background-color: gray;
+}
+
+button:visited
+{
+	 background-color: aqua;
+}
+
+body
+{
+	text-align: center;
+	background-color: #BBDEFB;
+}
+.fit_picture
+{
+width: 15;
+}
+
+
+
+.progress-bar-container {
+	width: 500px;
+	height: 10px;
+	background-color: lightgray;
+	margin-bottom: 10px;
+	position: relative;
+  }
+  
+  .progress-bar {
+	width: 0;
+	height: 100%;
+	background-color: green;
+	transition: width 0.3s ease-in-out;
+	position: absolute;
+	left: 0;
+	top: 0;
+  }
