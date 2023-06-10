@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>MBTI 테스트</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+<style>
+    *{
+        font-family: 'Jua', sans-serif;
+    }
+</style>
+</head>
+<body>
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <div class="div1" id="start-page">
+
+        <h1>나의 MBTI 유형은?</h1>
+        <ul>
+            <img src="./Image/물음표_투명배경_문자x.png"
+                 style="width: 250px; height: 250px;"
+                 title="한국외대 마스코트 부">
+        </ul>
+        <ul style="font-size: 20px;">
+            디자인 담당, 팀장 : 이정민
+        </ul>
+        <ul style="font-size: 20px;">
+            자바 스크립트 담당 : 정승환
+        </ul>
+        <ul style="font-size: 20px;;">
+            HTML 담당 : 허태수
+        </ul>
+        <button type=:"button" class="btn1" onclick="goToNextPage('EI-question-page 1')">시작하기!</button>
+    </div>
+
+
+    <div id="EI-question-page 1" style="display: none;">
+        <h1>질문 1.</h1>
+        <h2>당신은 주로</h2>
+        <ul>
+            <button type="button" class="btn2" onclick="handleChoiceEI(1,'e1')" class="option">사람들과 잘 섞이는 편이다.</button>
+            <button type="button" class="btn2" onclick="handleChoiceEI(2,'i1')" class="option">혼자있는 것을 좋아한다.</button>
+        </ul>
+        <button type=:"button" class="btn3" onclick="goToNextPage('EI-question-page 2')">다음</button>
+    </div>
+    <div id="EI-question-page 2" style="display: none;">
+        <h1>질문 2.</h1>
+        <h2>당신은 주로</h2>
+        <ul>
+            <button type="button" class="btn2" onclick="handleChoiceEI(1,'e2')" class="option">사람들과 대화하는 것을 즐긴다.</button>
+            <button type="button" class="btn2" onclick="handleChoiceEI(2,'i2')" class="option">혼자 생각하는 것을 좋아한다.</button>
+        </ul>
+        <button type=:"button" class="btn3" onclick="goToNextPage('EI-question-page 3')">다음</button>
+    </div>
+    <div id="EI-question-page 3" style="display: none;">
+        <h1>질문 3.</h1>
+        <h2>당신은 친구를 사귈 때</h2>
+        <ul>
+            <button type="button" class="btn2" onclick="handleChoiceEI(1,'e3')" class="option"><strong>여러 사람들과 두루두루 친해지는걸 좋아한다.</strong></button>
+            <button type="button" class="btn2" onclick="handleChoiceEI(2,'i3')" class="option"><strong>한 사람과 깊은 우정을 쌓는 것을 좋아한다.</strong></button>
+        </ul>
+        <ul>
+            <button type=:"button" class="btn3" onclick="goToNextPage('EI-question-page 4')">다음</button>
+        </ul>
+        
+    </div>
+    <div id="EI-question-page 4" style="display: none;">
+        <h1>질문 4.</h1>
+        <h2>당신은 사람들과 노는동안</h2>
+        <ul>
+            <button type="button" class="btn2" onclick="handleChoiceEI(1,'e4')" class="option"><strong>에너지가 충전되는 느낌이다.</strong></button>
+            <button type="button" class="btn2" onclick="handleChoiceEI(2,'i4')" class="option"><strong>에너지가 방전되는 느낌이다.</strong></button>
+        </ul>
+        <button type=:"button" class="btn3" onclick="goToNextPage('EI-question-page 5')">다음</button>
+    </div>
+    <div id="EI-question-page 5" style="display: none;">
+        <h1>질문 5.</h1>
+        <h2>친구들과의 약속이 전날 취소되었다. 당신의 기분은?</h2>
+        <ul>
+            <button type="button" class="btn2" onclick="handleChoiceEI(1,'e5')" class="option"><strong>약속이 취소된거에<br>아쉽다.</strong></button>
+            <button type="button" class="btn2" onclick="handleChoiceEI(2,'i5')" class="option"><strong>겉으로는 아쉬워 하지만<br>속으로는 약속이 취소되어서 기쁘다.</strong></button>
+        </ul>
+            <button type=:"button" class="btn3" onclick="goToNextPage('SN-question-page 1')">다음</button>
+    </div>
+
+
+    <div id="SN-question-page 1" style="display: none;">
+        <h1>질문 6.</h1>
+        <h2>나는 롤러코스터를 탈 때</h2>
+        <ul>
+            <button type="button" class="btn2" onclick="handleChoiceSN(1, 'S1')" class="option"><strong>재밌겠다. 바깥쪽 자리에 앉을 걸 그랬나?</strong></button>
+            <button type="button" class="btn2" onclick="handleChoiceSN(2, 'N1')" class="option"><strong>타다가 갑자기 사고가 나면 어떡하지?</strong></button>
+        </ul>
+        <button type=:"button" class="btn3" onclick="goToNextPage('SN-question-page 2')">다음</button>
+    </div>
+    <div id="SN-question-page 2" style="display: none;">
+        <h1>질문 7.</h1>
+        <h2>나는 요리를 할 때</h2>
+        <ul>
+            <button type="button" class="btn2" onclick="handleChoiceSN(1, 'S2')" class="option"><strong>유튜브나 인터넷으로 찾아본 후 그대로 만든다.</strong></button>
+            <button type="button" class="btn2" onclick="handleChoiceSN(2, 'N2')" class="option"><strong>이정도면 되겠지라는 생각에 감으로 때려 넣는다.</strong></button>
+        </ul>
+        <button type=:"button" class="btn3" onclick="goToNextPage('SN-question-page 3')">다음</button>
+    </div>
+    <div id="SN-question-page 3" style="display: none;">
+        <h1>질문 8.</h1>
+        <h2>나는 비행기를 타면</h2>
+        <ul>
+            <button type="button" class="btn2" onclick="handleChoiceSN(1, 'S3')" class="option"><strong>여행 100배 즐기기' 여행책을 정독한다.</strong></button>
+            <button type="button" class="btn2" onclick="handleChoiceSN(2, 'N3')" class="option"><strong>비행기가 추락하는 상상을 한다.</strong></button>
+        </ul>
+        <button type=:"button" class="btn3" onclick="goToNextPage('SN-question-page 4')">다음</button>
+    </div>
+    <div id="SN-question-page 4" style="display: none;">
+        <h1>질문 9.</h1>
+        <h2>나는 멍을 때릴 때</h2>
+        <ul>
+            <button type="button" class="btn2" onclick="handleChoiceSN(1, 'S4')" class="option"><strong>정말 아무 생각도 안한다.</strong></button>
+            <button type="button" class="btn2" onclick="handleChoiceSN(2, 'N4')" class="option"><strong>온갖 상상을 한다.</strong></button>
+        </ul>
+        <button type=:"button" class="btn3" onclick="goToNextPage('SN-question-page 5')">다음</button>
+    </div>
+    <div id="SN-question-page 5" style="display: none;">
+        <h1>질문 10.</h1>
+        <h2>나는 상사가 일을 시킬 때</h2>
+        <ul>
+            <button type="button" class="btn2" onclick="handleChoiceSN(1, 'S5')" class="option"><strong>구체적으로 할 일을 지시해야 편하다.</strong></button>
+            <button type="button" class="btn2" onclick="handleChoiceSN(2, 'N5')" class="option"><strong>방향만 제시해야 능률이 오른다.</strong></button>
+        </ul>
+        <button type=:"button" class="btn3" onclick="goToNextPage('TF-question-page 1')">다음</button>
+    </div>
+
+
+    <div id="TF-question-page 1" style="display: none;">
+        <h1>질문 11.</h1>
+        <h2>나는 친구가 회사 최종 면접에서 떨어졌을 때</h2>
+        <ul>
+            <button type="button" class="btn2" onclick="handleChoiceTF(1,'T1')" class="option"><strong>"답변을 어떻게 했었는지 말해줄래?"<br> 라고 말한다.</strong></button>
+            <button type="button" class="btn2" onclick="handleChoiceTF(2,'F1')" class="option"><strong>"속상해도 괜찮아, 다음에 잘하면 되지!"<br> 라고 말한다.</strong></button>
+        </ul>
+        <button type=:"button" class="btn3" onclick="goToNextPage('TF-question-page 2')">다음</button>
+    </div>
+    <div id="TF-question-page 2" style="display: none;">
+        <h1>질문 12.</h1>
+        <h2>나는 머리를 짧게 자른 친구에게</h2>
+        <ul>
+            <button type="button" class="btn2" onclick="handleChoiceTF(1,'T2')" class="option"><strong>"얼마나 잘랐어? 어디서 잘랐어?"<br> 라고 말한다."</strong></button>
+            <button type="button" class="btn2" onclick="handleChoiceTF(2,'F2')" class="option"><strong>"무슨 일 있었어?"<br> 라고 말한다.</strong></button>
+        </ul>
+        <button type=:"button" class="btn3" onclick="goToNextPage('TF-question-page 3')">다음</button>
+    </div>
+    <div id="TF-question-page 3" style="display: none;">
+        <h1>질문 13.</h1>
+        <h2>나는 친구가 우울해서 쇼핑하느라 과소비했다고 했을 때</h2>
+        <ul>
+            <button type="button" class="btn2" onclick="handleChoiceTF(1,'T3')" class="option"><strong>"얼마나 썼는데?"<br> 라고 말한다.</strong></button>
+            <button type="button" class="btn2" onclick="handleChoiceTF(2,'F3')" class="option"><strong>"왜 우울해? 무슨일 있어?"<br> 라고 말한다.</strong></button>
+        </ul>
+        <button type=:"button" class="btn3" onclick="goToNextPage('TF-question-page 4')">다음</button>
+    </div>
+    <div id="TF-question-page 4" style="display: none;">
+        <h1>질문 14.</h1>
+        <h2>나는 친구가 교통사고가 났다고 전화하면</h2>
+        <ul>
+            <button type="button" class="btn2" onclick="handleChoiceTF(1,'T4')" class="option"><strong>"보험 불렀어?"<br> 라고 말한다.</strong></button>
+            <button type="button" class="btn2" onclick="handleChoiceTF(2,'F4')" class="option"><strong>"무슨 일이야? 괜찮아? 크게 다쳤어?"<br> 라고 말한다.</strong></button>
+        </ul>
+        <button type=:"button" class="btn3" onclick="goToNextPage('TF-question-page 5')">다음</button>
+    </div>
+    <div id="TF-question-page 5" style="display: none;">
+        <h1>질문 15.</h1>
+        <h2>나 너무 슬퍼서 하루종일 집에만 있었어 라는 친구에게</h2>
+        <ul>
+            <button type="button" class="btn2" onclick="handleChoiceTF(1,'T5')" class="option"><strong>"집에서 뭐했는데?"<br> 라고 말한다.</strong></button>
+            <button type="button" class="btn2" onclick="handleChoiceTF(2,'F5')" class="option"><strong>"무슨일인데? 왜 슬퍼?"<br> 라고 말한다.</strong></button>
+        </ul>
+        <ul>
+            <button type=:"button" class="btn3" onclick="goToNextPage('PJ-question-page 1')">다음</button>
+        </ul>
+    
+    </div>
+
+
+    <div id="PJ-question-page 1" style="display: none;">
+        <h1>질문 16.</h1>
+        <h2>당신은 과제를</h2>
+        <ul>
+            <button type="button" class="btn2" onclick="handleChoicePJ(2,'J1')" class="option"><strong>미리미리 계획 세워서한다.<br> 미리 완료 안하면 불안하다</strong></button>
+            <button type="button" class="btn2" onclick="handleChoicePJ(1,'P1')" class="option"><strong>제출 마감일 하루 전에<br> 시작한다.</strong></button>
+        </ul>
+        <ul>
+            <button type=:"button" class="btn3" onclick="goToNextPage('PJ-question-page 2')">다음</button>
+        </ul>
+        
+    </div>
+    <div id="PJ-question-page 2" style="display: none;">
+        <h1>질문 17.</h1>
+        <h2>당신이 자주 지각하는 친구와 여행을 갔을 때</h2>
+        <ul>
+            <button type="button" class="btn2" onclick="handleChoicePJ(2,'J2')" class="option"><strong>그 친구가 지각을 할 상황도<br> 고려해서 계획을 짠다.</strong></button>
+            <button type="button" class="btn2" onclick="handleChoicePJ(1,'P2')" class="option"><strong>갑자기 꽂히는<br> 맛집이나 카페로 간다.</strong></button>
+        </ul>
+        <button type=:"button" class="btn3" onclick="goToNextPage('PJ-question-page 3')">다음</button>
+    </div>
+    <div id="PJ-question-page 3" style="display: none;">
+        <h1>질문 18.</h1>
+        <h2>약속을 앞 둔 당신</h2>
+        <ul>
+            <button type="button" class="btn2" onclick="handleChoicePJ(2,'J3')" class="option"><strong>1시간 전 부터 미리 준비한다.</strong></button>
+            <button type="button" class="btn2" onclick="handleChoicePJ(1,'P3')" class="option"><strong>시간이 다되어서 준비한다.</strong></button>
+        </ul>
+        <ul>
+            <button type=:"button" class="btn3" onclick="goToNextPage('PJ-question-page 4')">다음</button>
+        </ul>
+        
+    </div>
+    <div id="PJ-question-page 4" style="display: none;">
+        <h1>질문 19.</h1>
+        <h2>당신의 친구가 갑자기 찾아왔을 때</h2>
+        <ul>
+            <button type="button" class="btn2" onclick="handleChoicePJ(2,'J4')" class="option"><strong>갑자기 찾아오면 불편하다.</strong></button>
+            <button type="button" class="btn2" onclick="handleChoicePJ(1,'P4')" class="option"><strong>그 순간이 재밌거나 끌리면 그냥 좋다.</strong></button>
+        </ul>
+        <button type=:"button" class="btn3" onclick="goToNextPage('PJ-question-page 5')">다음</button>
+    </div>
+    <div id="PJ-question-page 5" style="display: none;">
+        <h1>질문 20.</h1>
+        <h2>당신은 공부할 때</h2>
+        <ul>
+            <button type="button" class="btn2" onclick="handleChoicePJ(2,'J5')" class="option"><strong>분, 시간 단위로 어떤 과목을<br> 얼마나 공부할지 계획한다.</strong></button>
+            <button type="button" class="btn2" onclick="handleChoicePJ(1,'P5')" class="option"><strong>그날 하고 싶은 공부를<br> 하고싶은 만큼 공부한다.</strong></button>
+        </ul>
+        <button type=:"button" class="btn4" onclick="goToNextPage('result-page')">결과 확인하기</button>
+    </div>
+
+    <div class="div2" id="result-page" style="display: none;">
+    </div>
+
+
+    <div id = "result-INTJ" style="display: none;">
+        <ul>
+            <h1>나의 MBTI 는?</h1>
+            <div class="div3">
+            <h2 class="mbti"><strong>INTJ</strong></h2>
+            <h3>#모든 일에 대해 계획을 세우며 상상력이 풍부한 전략가.</h3>
+            <h4>#하루하루 세세하세 계획을 짜고 지내는 것을 좋아하는 성격!</h4>
+            <h5>#공상하면서 다각도로 생각하는 시간이 좋아!</h5>
+            <h6>#돈관리 잘하는 완벽주의적인 사람!</h6>
+        </ul>
+    </div>
+    <div id = "result-INTP" style="display: none;">
+        <ul>
+            <h1>나의 MBTI 는?</h1>
+            <div class="div3">
+            <h2 class="mbti"><strong>INTP</strong></h2>
+            <h3>#지식을 끝없이 갈망하는 혁신적인 발명가.</h3>
+            <h4>#혼자있는게 제일 편하고 행복한 사람!</h4>
+            <h5>#분석, 추리를 좋아하고 지식의 대한 욕망이 강한 성격!</h5>
+            <h6>#공상가</h6>
+        </ul>
+    </div>
+    <div id = "result-ENTJ" style="display: none;">
+        <ul>
+            <h1>나의 MBTI 는?</h1>
+            <div class="div3">
+            <h2 class="mbti"><strong>ENTJ</strong></h2>
+            <h3>#항상 문제 해결 방법을 찾아내는 성격. 대담하고 상상력이 풍부하며 의지가 강력한 지도자.</h3>
+            <h4>#팀 과제가 있으면 결국 총대를 매고 자신이 팀장을 맡는 사람!</h4>
+            <h5>#열등감을 모르는 성격!</h5>
+            <h6>#지도자</h6>
+        </ul>
+    </div>
+    <div id = "result-ENTP" style="display: none;">
+        <ul>
+            <h1>나의 MBTI 는?</h1>
+            <div class="div3">
+            <h2 class="mbti"><strong>ENTP</strong></h2>
+            <h3>#지적 도전을 즐기는 영리하고 호기심이 많은 사색가.</h3>
+            <h4>#혼자서 돌아다니는게 편안하고 다른사람들의 일에 관심이 없는 사람!</h4>
+            <h5>#독립심이 강하고, 지나간 일에 후회가 없는 성격!</h5>
+            <h6>#겉모습은 인싸, 속은 아싸</h6>
+            </div>
+        </ul>
+    </div>
+    <div id = "result-INFJ" style="display: none;">
+        <ul>
+            <h1>나의 MBTI 는?</h1>
+            <div class="div3">
+            <h2 class="mbti"><strong>INFJ</strong></h2>
+            <h3>#차분하고 신비로운 분위기를 풀기는 성격, 다른 사람에게 의욕을 불어넣는 이상주의자.</h3>
+            <h4>#할거를 미리미리 해결하는 성격!</h4>
+            <h5>#집순이지만 여행이 좋아!</h5>
+            <h6>#가끔은 혼자만의 시간이 필요해...</h6>
+        </ul>
+    </div>
+    <div id = "result-INFP" style="display: none;">
+        <ul>
+            <h1>나의 MBTI 는?</h1>
+            <div class="div3">
+            <h2 class="mbti"><strong>INFP</strong></h2>
+            <h3>#항상 선을 행할 준비가 되어 있는 부드럽고 친절한 이타주의자.</h3>
+            <h4>#관종이지만 막상 관심을 받으면 몸이 굳어버리는 사람.</h4>
+            <h5>#화가 날때는 혼자서 삭혀야 하는 성격!</h5>
+            <h6>#이상주의자</h6>
+        </ul>
+    </div>
+    <div id = "result-ENFJ" style="display: none;">
+        <ul>
+            <h1>나의 MBTI 는?</h1>
+            <div class="div3">
+            <h2 class="mbti"><strong>ENFJ</strong></h2>
+            <h3>#청중을 사로잡고 의욕을 불어넣는 카리스마 넘치는 지도자.</h3>
+            <h4>#사람들을 이끄는 것에 타고난 기질이 있고 또 좋아하는 사람!</h4>
+            <h5>#멘탈이 강한 성격!</h5>
+            <h6>#언변능숙</h6>
+        </ul>
+    </div>
+    <div id = "result-ENFP" style="display: none;">
+        <ul>
+            <h1>나의 MBTI 는?</h1>
+            <div class="div3">
+            <h2 class="mbti"><strong>ENFP</strong></h2>
+            <h3>#열정적이고 창의적인 성격, 긍정적으로 삶을 바라보는 사교적이면서도 자유로운 영혼.</h3>
+            <h4>#일머리가 좋은 사람!</h4>
+            <h5>#흥미있고 관심있는건 열정적이지만 관심없는건 별로 열정적이지 않은 성격!</h5>
+            <h6>#거짓말을 잘 못한다.</h6>
+        </ul>
+    </div>
+    <div id = "result-ISTJ" style="display: none;">
+        <ul>
+            <h1>나의 MBTI 는?</h1>
+            <div class="div3">
+            <h2 class="mbti"><strong>ISTJ</strong></h2>
+            <h3>#사실을 중시하는 믿음직한 현실주의자.</h3>
+            <h4>#여행을 가면 먼저 계획을 세우는 사람!</h4>
+            <h5>#딱딱하다는 소리를 자주 듣지만 책임감이 많은 성격!</h5>
+            <h6>#또한 일을 시작하면 끝을내는 인내심이 강한 성격!</h6>
+        </ul>
+    </div>
+    <div id = "result-ISFJ" style="display: none;">
+        <ul>
+            <h1>나의 MBTI 는?</h1>
+            <div class="div3">
+            <h2 class="mbti"><strong>ISFJ</strong></h2>
+            <h3>#주변 사람을 보호할 준비가 되어 있는 헌신적이고 따뜻한 수호자.</h3>
+            <h4>#원칙을 중요시하게 생각하는 사람!</h4>
+            <h5>#아싸중에 인싸, 인싸중에 아싸.</h5>
+            <h6>#게으른 완벽주의자.</h6>
+        </ul>
+    </div>
+    <div id = "result-ESTJ" style="display: none;">
+        <ul>
+            <h1>나의 MBTI 는?</h1>
+            <div class="div3">
+            <h2 class="mbti"><strong>ESTJ</strong></h2>
+            <h3>#사물과 사람을 관리하는 데 뛰어난 능력을 지닌 경영자.</h3>
+            <h4>#리더의 자리를 맡는거를 싫어하지만 막상 하면 잘하는 사람!</h4>
+            <h5>#고집이 강하고, 현실적, 이성적이며 직설적인 성격!</h5>
+            <h6>#리더의 역량이 매우 큰 사람!</h6>
+        </ul>
+    </div>
+    <div id = "result-ESFJ" style="display: none;">
+        <ul>
+            <h1>나의 MBTI 는?</h1>
+            <div class="div3">
+            <h2 class="mbti"><strong>ESFJ</strong></h2>
+            <h3>#배려심이 넘치고 항상 다른 사람들 도울 준비가 되어 있는 성격, 인기가 많고 사교성이 높은 마당발.</h3>
+            <h4>#매사에 매우 철저하며 책을 읽고 사람!</h4>
+            <h5>#모임에서 어색한거 못참고 먼저 말을거는 성격!</h5>
+            <h6>#주변인물들을 잘 챙기는 사람!</h6>
+        </ul>
+    </div>
+    <div id = "result-ISTP" style="display: none;">
+        <ul>
+            <h1>나의 MBTI 는?</h1>
+            <div class="div3">
+            <h2 class="mbti"><strong>ISTP</strong></h2>
+            <h3>#대담하면서도 현실적인 성격, 모든 종류의 도구를 자유자재를 다루는 장인.</h3>
+            <h4>#노력절약형, 효울적인것을 좋아하는 사람!</h4>
+            <h5>#내가 맡은바는 끝까지 다 하는 성격!</h5>
+            <h6>#망상가</h6>
+        </ul>
+    </div>
+    <div id = "result-ISFP" style="display: none;">
+        <ul>
+            <h1>나의 MBTI 는?</h1>
+            <div class="div3">
+            <h2 class="mbti"><strong>ISFP</strong></h2>
+            <h3>#항상 새로운 경험을 추구하는 유연하고 매력 넘치는 예술가.</h3>
+            <h4>#혼자가 좋지만 막상 나가서 놀면 잘 노는 사람!</h4>
+            <h5>#감정기복이 심하고, 공감능력이 좋은 성격!</h5>
+            <h6>#배려형 개인주의</h6>
+        </ul>
+    </div>
+    <div id = "result-ESTP" style="display: none;">
+        <ul>
+            <h1>나의 MBTI 는?</h1>
+            <div class="div3">
+            <h2 class="mbti"><strong>ESTP</strong></h2>
+            <h3>#위험을 기꺼이 감수하는 성격, 영리하고 에너지 넘치며 관찰력이 뛰어난 사업가.</h3>
+            <h4>#리더쉽이 매우 뛰어나며, 손재주가 좋은 사람!</h4>
+            <h5>#모임에서는 분위지를 주도하는 성격!</h5>
+            <h6>#어른들이 좋아하는 사람.</h6>
+        </ul>
+    </div>
+    <div id = "result-ESFP" style="display: none;">
+        <ul>
+            <h1>나의 MBTI 는?</h1>
+            <div class="div3">
+            <h2 class="mbti"><strong>ESFP</strong></h2>
+            <h3>#즉흥적이고 넘치는 에너지와 열정으로 주변 사람을 즐겁게 하는 연예인.</h3>
+            <h4>#성격이 매우 급하고, 다른사람에 관심이 많은 사람!</h4>
+            <h5>#혼자있으면 지루해서 뭔갈 계속 하고 있어야하는 성격!</h5>
+            <h6>#우주최강오지랖</h6>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

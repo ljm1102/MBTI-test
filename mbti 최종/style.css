@@ -1,0 +1,252 @@
+div
+{
+width: 1100px;
+height: 580px;
+background-color: #E1F6FA;
+margin: 0 auto;
+border-radius: 20px;
+}
+
+.div1
+{
+width: 1000px;
+height: 580px;
+background-color: #E1F6FA;
+margin: 0 auto;
+border-radius: 20px;
+}
+
+.div2
+{
+width: 1000px;
+height: 800px;
+background-color: #E1F6FA;
+margin: 0 auto;
+border-radius: 20px;
+}
+.div3
+{
+	margin: 0 auto;
+padding:2em;
+border-radius:30px;
+background-color: white;
+width: 800px;
+height: 400px;
+}
+.mbti
+{
+	background: #12FFFF;
+	text-align: center;
+	background: linear-gradient(to right, #12FFFF 8%, #19FFC9 67%);
+	-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-size: 60px
+}
+.btn1
+{
+	padding: 0.75em 2em;
+	text-align: center;
+	text-decoration: none;
+	color: #2194E0;
+	border: 2px solid #2194E0;
+	font-size: 24px;
+	display: inline-block;
+	border-radius: 0.3em;
+	transition: all 0.2s ease-in-out;
+	position: relative;
+	overflow: hidden;
+	min-width: 500px;
+	&:before {
+	  content: "";
+	  background-color: rgba(255,255,255,0.5);
+	  height: 100%;
+	  width: 3em;
+	  display: block;
+	  position: absolute;
+	  top: 0;
+	  left: -4.5em;
+	  transform: skewX(-45deg) translateX(0);
+	  transition: none;
+	}
+	&:hover {
+	  background-color: #2194E0;
+	  color: #fff;
+	  border-bottom: 4px solid darken(#2194E0, 10%);
+	  &:before {
+		transform: skewX(-45deg) translateX(13.5em);
+	   transition: all 0.5s ease-in-out;
+	  }
+	}
+  }
+.btn2
+  {
+	  padding: 0.75em 2em;
+	  text-align: center;
+	  text-decoration: none;
+	  color: #2194E0;
+	  border: 2px solid #2194E0;
+	  font-size: 20px;
+	  display: inline-block;
+	  border-radius: 0.3em;
+	  transition: all 0.2s ease-in-out;
+	  position: relative;
+	  overflow: hidden;
+	  min-width: 300px;
+	  min-height: 200px;
+	  &:before {
+		content: "";
+		background-color: rgba(255,255,255,0.5);
+		height: 100%;
+		width: 3em;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: -4.5em;
+		transform: skewX(-45deg) translateX(0);
+		transition: none;
+	  }
+	  &:hover {
+		background-color: #2194E0;
+		color: #fff;
+		border-bottom: 4px solid darken(#2194E0, 10%);
+		&:before {
+		  transform: skewX(-45deg) translateX(13.5em);
+		 transition: all 0.5s ease-in-out;
+		}
+	  }
+	}
+.btn3
+	{
+		padding: 0.75em 2em;
+		text-align: center;
+		text-decoration: none;
+		color: #2194E0;
+		border: 2px solid #2194E0;
+		font-size: 24px;
+		display: inline-block;
+		border-radius: 0.3em;
+		transition: all 0.2s ease-in-out;
+		position: relative;
+		overflow: hidden;
+		min-width: 200px;
+		&:before {
+		  content: "";
+		  background-color: rgba(255,255,255,0.5);
+		  height: 100%;
+		  width: 3em;
+		  display: block;
+		  position: absolute;
+		  top: 0;
+		  left: -4.5em;
+		  transform: skewX(-45deg) translateX(0);
+		  transition: none;
+		}
+		&:hover {
+		  background-color: #2194E0;
+		  color: #fff;
+		  border-bottom: 4px solid darken(#2194E0, 10%);
+		  &:before {
+			transform: skewX(-45deg) translateX(13.5em);
+		   transition: all 0.5s ease-in-out;
+		  }
+		}
+	  }
+.btn4
+	  {
+		  padding: 0.75em 2em;
+		  text-align: center;
+		  text-decoration: none;
+		  color: #2194E0;
+		  border: 2px solid #2194E0;
+		  font-size: 24px;
+		  display: inline-block;
+		  border-radius: 0.3em;
+		  transition: all 0.2s ease-in-out;
+		  position: relative;
+		  overflow: hidden;
+		  min-width: 500px;
+		  &:before {
+			content: "";
+			background-color: rgba(255,255,255,0.5);
+			height: 100%;
+			width: 3em;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: -4.5em;
+			transform: skewX(-45deg) translateX(0);
+			transition: none;
+		  }
+		  &:hover {
+			background-color: #2194E0;
+			color: #fff;
+			border-bottom: 4px solid darken(#2194E0, 10%);
+			&:before {
+			  transform: skewX(-45deg) translateX(13.5em);
+			 transition: all 0.5s ease-in-out;
+			}
+		  }
+		}
+			
+
+button:hover
+{
+	background-color: #C8FFFF;
+}
+button:focus
+{
+	
+	background-color: #C8FFFF;
+	
+}
+button:active
+{
+	background-color: gray;
+}
+
+button:visited
+{
+	 background-color: aqua;
+}
+
+body
+{
+	text-align: center;
+	background: linear-gradient(lightCyan, skyBlue, deepSkybLUE);
+}
+.fit_picture
+{
+width: 15;
+}
+
+h3{
+	font-size: 18px;
+}
+h4{
+	font-size: 18px;
+}
+h5{
+	font-size: 18px;
+}
+h6{
+	font-size: 18px;
+}
+
+
+.progress-bar-container {
+	width: 500px;
+	height: 10px;
+	background-color: lightgray;
+	margin-bottom: 10px;
+	position: relative;
+  }
+  
+  .progress-bar {
+	width: 0;
+	height: 100%;
+	background-color: green;
+	transition: width 0.3s ease-in-out;
+	position: absolute;
+	left: 0;
+	top: 0;
+  }
